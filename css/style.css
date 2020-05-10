@@ -1016,6 +1016,7 @@ iframe[src^="https://codepen"] {
 
 @media(min-width: 1000px) {
     .about-layout {
+        align-items: flex-start;
         flex-direction: row;
         text-align: left;
     }
