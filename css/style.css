@@ -1164,6 +1164,12 @@ input#name {
     color: var(--accessible-navy);
 }
 
+.form small {
+    display: block;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
 /* animations */
 .slide-from-right {
     animation: slide-from-right .25s 1;
