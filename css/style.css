@@ -1028,6 +1028,10 @@ iframe[src^="https://codepen"] {
         transform: scale(.98);
     }
 
+    .about-avatar {
+        margin-right: 30px;
+    }
+
     .about-layout .btn {
         float: right;
     }
@@ -1037,7 +1041,6 @@ iframe[src^="https://codepen"] {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-right: 30px;
     position: relative;
     z-index: -1;
 }
