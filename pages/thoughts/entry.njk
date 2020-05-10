@@ -1,0 +1,32 @@
+---
+pagination:
+    data: thoughts
+    size: 1
+    alias: thoughts
+permalink: "thoughts/{{ thoughts.slug }}/"
+---
+{% set animation = 'slide-from-left' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    {% if thoughts.metaTitle | length %}
+        {{ thoughts.metaTitle }}
+    {% else %}
+        {{ thoughts.title + ' - carlevans.dev' }}
+    {% endif %}
+{% endblock %}
+
+{% block metaDescription %}
+    {% if thoughts.metaDescription | length %}
+        {{ thoughts.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">
+        <a href="/thoughts">Thoughts</a> / {{ thoughts.title }}.
+    </h1>
+    {% for block in thoughts.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

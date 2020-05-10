@@ -1,0 +1,14 @@
+<section class="cards block-padding {{ block.theme }}">
+    <h3 class="fancy-heading">{{ block.heading }}</h3>
+    <p>{{ block.text }}</p>
+    <ul class="cards-list">
+        {% for item in block.items %}
+            <li>
+                <a href="{{ item.target }}" class="card" title="view {{ item.title }}">
+                    <img src="{{ item.image }}" loading="lazy" alt="{{ item.title }}">
+                    <h4>{{ item.text }}</h4>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,13 @@
+<section class="text-image{% if block.direction != 'left' %} text-image--reverse{% endif %} block-padding {{ block.theme }}">
+    <img src="{{ block.image.url }}"
+         alt="{{ block.image.title }}" 
+         loading="lazy"
+         width="500"
+         height="400"
+         class="text-image__image" 
+         >
+    <div class="text-image-text">
+        <h3 class="fancy-heading">{{ block.heading }}</h3>
+        <p>{{ block.text }}</p>
+    </div>
+</section>

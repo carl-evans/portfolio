@@ -1,0 +1,32 @@
+---
+pagination:
+    data: about
+    size: 1
+    alias: about
+permalink: "about/{{ about.title | slug }}/"
+---
+{% set animation = 'slide-from-left' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    {% if about.metaTitle | length %}
+        {{ about.metaTitle }}
+    {% else %}
+        {{ about.title + ' - carlevans.dev' }}
+    {% endif %}
+{% endblock %}
+
+{% block metaDescription %}
+    {% if about.metaDescription | length %}
+        {{ about.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">
+        <a href="/about">About</a> / {{ about.title }}.
+    </h1>
+    {% for block in about.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

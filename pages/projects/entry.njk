@@ -1,0 +1,32 @@
+---
+pagination:
+    data: projects
+    size: 1
+    alias: projects
+permalink: "projects/{{ projects.title | slug }}/"
+---
+{% set animation = 'slide-from-left' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    {% if projects.metaTitle | length %}
+        {{ projects.metaTitle }}
+    {% else %}
+        {{ projects.title + ' - carlevans.dev' }}
+    {% endif %}
+{% endblock %}
+
+{% block metaDescription %}
+    {% if projects.metaDescription | length %}
+        {{ projects.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">
+        <a href="/projects">Projects</a> / {{ projects.title }}.
+    </h1>
+    {% for block in projects.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

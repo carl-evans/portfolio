@@ -1,0 +1,7 @@
+{% if block.text | length %}
+    <article class="rich-text block-padding {{ block.theme }}">
+        <div class="rich-text-wrap mx-auto">
+            {{ block.text|safe }}
+        </div>
+    </article>
+{% endif %}

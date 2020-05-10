@@ -1,0 +1,37 @@
+---
+permalink: "contact/"
+---
+{% set animation = 'slide-from-top' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+Contact - carlevans.dev
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">Contact.</h1>
+    <form name="contact"
+          method="post" 
+          data-netlify="true"
+          netlify-honeypot="bot-field" 
+          autocomplete="off" 
+          class="mx-auto">
+        <fieldset>
+            <div class="form-row">
+                <input type="text" id="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="form-row">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-row">
+                <textarea id="message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

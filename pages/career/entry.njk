@@ -1,0 +1,32 @@
+---
+pagination:
+    data: career
+    size: 1
+    alias: career
+permalink: "career/{{ career.title | slug }}/"
+---
+{% set animation = 'slide-from-left' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    {% if career.metaTitle|length %}
+        {{ career.metaTitle }}
+    {% else %}
+        {{ career.title + ' - carlevans.dev' }}
+    {% endif %}
+{% endblock %}
+
+{% block metaDescription %}
+    {% if career.metaDescription|length %}
+        {{ career.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">
+        <a href="/career">Career</a> / {{ career.title }}.
+    </h1>
+    {% for block in career.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

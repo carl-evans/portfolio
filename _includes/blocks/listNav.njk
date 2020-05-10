@@ -1,0 +1,14 @@
+<section class="list-nav block-padding white">
+    <ul class="list-nav-list">
+        {% for target in block.targets %}
+            <li class="list-nav-item">
+                <h3>
+                    <a href="{{ target.target }}" title="go to the {{ target.text }} page">
+                        {{ target.text }}
+                    </a>
+                </h3>
+                <p>{{ target.subText }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

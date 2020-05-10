@@ -1,0 +1,26 @@
+---
+data: about
+alias: about
+permalink: "about/"
+---
+{% set animation = 'slide-from-right' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    About - carlevans.dev
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">About.</h1>
+
+    <div class="grid">
+        {% set theme = cycler('navy', 'pink') %}
+        {% for entry in about %}
+            <a href="{{ entry.slug }}">
+                <div class="about-panel {{ theme.next() }}">
+                    <h3>{{ entry.title }}</h3>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

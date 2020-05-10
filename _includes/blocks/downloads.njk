@@ -1,0 +1,12 @@
+<aside class="downloads mx-auto block-padding">
+    <h3 class="fancy-heading mx-auto center">{{ block.heading }}</h3>
+    <p class="mx-auto center">{{ block.text }}</p>
+    <ul class="downloads-list">
+        {% for item in block.items %}
+            <li class="downloads-list-item">
+                <a href="{{ item.asset }}" target="_blank" rel="noreferrer" class="h4" title="view {{ item.text }}">{{ item.text }}</h4>
+                <a href="{{ item.asset }}" target="_blank" rel="noreferrer" class="btn" title="title="{{ item.text }}">View</a>
+            </li>
+        {% endfor %}
+    </ul>
+</aside>

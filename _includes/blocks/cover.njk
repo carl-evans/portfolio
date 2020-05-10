@@ -1,0 +1,17 @@
+<header class="cover" {% if block.image|length %}style="background-image: url('{{ block.image }}');"{% endif %}>
+    <strong>{{ block.heading }}</strong>
+    <p>{{ block.text }}</p>
+
+    {% for cta in block.ctas %}
+        <a href="{{ cta.target }}" class="btn btn--navy" title="{{ cta.text }}">{{ cta.text }}</a>
+    {% endfor %}
+
+    {% for icon in block.icons %}
+        <img src="{{ icon.src }}" 
+            alt="{{ icon.title }}" 
+            loading="lazy"
+            width="1200"
+            height="600"    
+        >
+    {% endfor %}
+</header>

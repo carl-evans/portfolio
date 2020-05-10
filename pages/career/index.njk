@@ -1,0 +1,24 @@
+---
+data: career
+permalink: "career/"
+---
+{% set animation = 'slide-from-right' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    Career - carlevans.dev
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">Career.</h1>
+    <div class="downloads mx-auto">
+        <ul class="downloads-list">
+            {% for entry in career %}
+                <li class="downloads-list-item {% if loop.first %}no-padding-top{% endif %}">
+                    <a href="{{ entry.url }}" class="h4">{{ entry.title }}</a>
+                    <a href="{{ entry.url }}" class="btn">Read More</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,107 @@
+data: thoughts
+
+{% set animation = 'slide-from-top' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    Front End Developer NI - carlevans.dev
+{% endblock %}
+
+{% block metaDescription %}
+    {% if homepage.metaDescription | length %}
+        {{ homepage.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">Welcome.</h1>
+    <div class="scroll-snap-y-start">
+        <div class="block-padding-large pink--homepage relative">
+            <h2 class="turn-accessible-navy-white">Front End Developer in NI</h2>
+            <p class="turn-accessible-navy-white">
+            I build websites at Eyekiller and share what 
+            I learn by developing projects, sharing tutorials, 
+            and writing down my thoughts.
+            </p>
+            <a href="/about" class="btn turn-accessible-navy-white">Learn About Me</a>
+            <small class="skills turn-accessible-navy-white">
+                HTML,
+                CSS,
+                JavaScript,
+                Sass,
+                Craft CMS,
+                Twig,
+                Eleventy,
+                WordPress,
+                PHP for WordPress,
+                MongoDb,
+                Express,
+                Node,
+                Vue.js
+            </small>
+        </div>
+        <div class="block-padding-large navy">
+            <h2>I build a lot of stuff</h2>
+            <p>
+            Most of my experience is in front end development with
+            Craft CMS and WordPress. I am currently upskilling in
+            back end technologies such as Node.js and MongoDb.
+            </p>
+            <a href="/projects" class="btn">View Projects</a>
+        </div>
+        <div class="block-padding-large blue">
+            <h2>I write a lot of stuff</h2>
+            <p>Here are my latest rants:</p>
+            <div class="downloads mx-auto">
+                <ul class="downloads-list downloads-list--homepage">
+                    {% for entry in thoughts %}
+                        <li class="downloads-list-item">
+                            <a href="{{ entry.slug }}" class="h4">{{ entry.title }}</a>
+                            <a href="{{ entry.slug }}" class="btn">Read More</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <a href="/thoughts" class="btn">Explore Thoughts</a>
+        </div>
+        <section class="cards block-padding">
+            <h3 class="fancy-heading">Credits</h3>
+            <p>This website was built on the shoulders of giants:</p>
+            <ul class="cards-list">
+                <li>
+                    <a href="https://craftcms.com/" target="_blank=" rel="noreferrer" class="card" style="background-color: #e5422a;">
+                        <h4>Craft CMS</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.11ty.dev/" target="_blank=" rel="noreferrer" class="card" style="background-color: #222;">
+                        <h4>Eleventy</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.netlify.com/"  target="_blank=" rel="noreferrer" class="card" style="background-color: #00ad9f;">
+                        <h4>Netlify</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://barba.js.org/" target="_blank=" rel="noreferrer" class="card" style="background-color: #2e5bdc;">
+                        <h4>Barba.js</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://iconmonstr.com/" target="_blank=" rel="noreferrer" class="card" style="background-color: var(--blue);">
+                        <h4>Iconmonstr</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://unsplash.com/" target="_blank=" rel="noreferrer" class="card" style="background-color: var(--pink);">
+                        <h4>Unsplash</h4>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    {% for block in homepage.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

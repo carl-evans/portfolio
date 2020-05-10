@@ -1,0 +1,30 @@
+---
+pagination:
+    data: generic
+    size: 1
+    alias: generic
+permalink: "{{ generic.title | slug }}/"
+---
+{% set animation = 'slide-from-left' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    {% if generic.metaTitle|length %}
+        {{ generic.metaTitle }}
+    {% else %}
+        {{ generic.title + ' - carlevans.dev' }}
+    {% endif %}
+{% endblock %}
+
+{% block metaDescription %}
+    {% if generic.metaDescription|length %}
+        {{ generic.metaDescription }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">{{ generic.title }}.<h1/>
+    {% for block in generic.blocks %}
+        {% include 'blocks/' + block.type + '.njk' %}
+    {% endfor %}
+{% endblock %}

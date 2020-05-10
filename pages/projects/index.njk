@@ -1,0 +1,25 @@
+---
+data: projects
+alias: projects
+permalink: "projects/"
+---
+{% set animation = 'slide-from-right' %}
+{% extends 'layouts/base.njk' %}
+
+{% block metaTitle %}
+    Projects - carlevans.dev
+{% endblock %}
+
+{% block content %}
+    <h1 class="page-heading">Projects.</h1>
+    <div class="grid halves">
+        {% set theme = cycler('pink', 'navy', 'navy', 'pink') %}
+        {% for entry in projects %}
+            <a href="{{ entry.slug }}" aria-label="{{ entry.title }}">
+                <div class="about-panel {{ theme.next() }}">
+                    <h3>{{ entry.title }}</h3>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
