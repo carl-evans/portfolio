@@ -353,6 +353,7 @@ h6 {
     scroll-snap-align: center;
 }
 
+.hidden,
 .site-header-list::-webkit-scrollbar-thumb {
     display: none;
 }

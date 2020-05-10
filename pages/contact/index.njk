@@ -11,23 +11,32 @@ Contact - carlevans.dev
 {% block content %}
     <h1 class="page-heading">Contact.</h1>
     <form name="contact"
+          action="/contact/thanks"
           method="post" 
           data-netlify="true"
           netlify-honeypot="bot-field" 
           autocomplete="off" 
           class="mx-auto">
         <fieldset>
+        <p class="hidden">
+            <label>Don’t fill this out if you're human:
+                <input name="bot-field" />
+            </label>
+        </p>
             <div class="form-row">
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
                 <label for="name">Name</label>
             </div>
             <div class="form-row">
-                <input type="email" id="email" required>
+                <input type="email" name="email" id="email" required>
                 <label for="email">Email</label>
             </div>
             <div class="form-row">
-                <textarea id="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <label for="message">Message</label>
+            </div>
+            <div class="form-row">
+                <div data-netlify-recaptcha="true"></div>
             </div>
             <div class="form-row">
                 <button type="submit" class="btn">Send Message</button>
