@@ -14,7 +14,7 @@
       {{css | cssmin | safe}}
     </style>
   </head>
-  <body class="container" data-barba="wrapper">
+  <body class="container {% block bodyClass %}{% endblock %}" data-barba="wrapper">
     <a href="#main-content" class="sr-only">Skip to main content</a>
     {% include "partials/header.njk" %}
     <main id="main-content" data-barba="container" class="{% if animation %}{{ animation }}{% endif %}">
