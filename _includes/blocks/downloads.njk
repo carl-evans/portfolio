@@ -5,7 +5,7 @@
         {% for item in block.items %}
             <li class="downloads-list-item">
                 <a href="{{ item.asset }}" target="_blank" rel="noreferrer" class="h4" title="view {{ item.text }}">{{ item.text }}</h4>
-                <a href="{{ item.asset }}" target="_blank" rel="noreferrer" class="btn" title="title="{{ item.text }}">View</a>
+                <a href="{{ item.asset }}" target="_blank" rel="noreferrer" class="btn" title="{{ item.text }}">View</a>
             </li>
         {% endfor %}
     </ul>
