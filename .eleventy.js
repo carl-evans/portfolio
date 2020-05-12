@@ -3,6 +3,9 @@ const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("icons");
+  eleventyConfig.addPassthroughCopy("src-sw.js");
+  eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
