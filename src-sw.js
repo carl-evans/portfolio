@@ -8,3 +8,8 @@ registerRoute(
   ({url}) => url.origin === 'https://s3.eu-west-1.amazonaws.com/carl-evans-craft-images' ||
   new StaleWhileRevalidate(),
 );
+
+registerRoute(
+  ({url}) => url.origin === 'https://unpkg.com/@barba/core' ||
+  new StaleWhileRevalidate(),
+);
