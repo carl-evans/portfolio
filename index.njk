@@ -56,8 +56,8 @@ data: thoughts
                 <ul class="downloads-list downloads-list--homepage">
                     {% for entry in thoughts %}
                         <li class="downloads-list-item">
-                            <a href="{{ entry.slug }}" class="h4">{{ entry.title }}</a>
-                            <a href="{{ entry.slug }}" class="btn">Read More</a>
+                            <a href="{{ entry.url }}" class="h4">{{ entry.title }}</a>
+                            <a href="{{ entry.url }}" class="btn">Read More</a>
                         </li>
                     {% endfor %}
                 </ul>
