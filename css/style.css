@@ -1006,7 +1006,8 @@ iframe[src^="https://codepen"] {
 }
 
 .about-layout strong {
-    margin-top: 5px;
+    display: block;
+    margin-top: 10px;
 }
 
 @media(min-width: 1000px) {
