@@ -185,7 +185,7 @@ li {
 
 h1,
 .h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -329,6 +329,7 @@ h6 {
 .site-header {
     position: relative;
     z-index: 1;
+    background-color: var(--white);
 }
 
 .site-header-layout {
@@ -425,6 +426,37 @@ h6 {
     margin-right: 10px;
     position: relative;
     top: 3px;
+}
+
+@media(max-width: 640px) {
+    .page-heading {
+        margin-top: 30px;
+    }
+    .site-header {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 0 20px;
+        z-index: 100;
+    }
+    .site-header-list {
+        margin: 0;
+    }
+    .site-header-list > *+*{
+        margin-left: 21px;
+    }
+    .site-header-list a {
+        font-size: 1.6rem;
+    }
+    .logo {
+        display: none;
+    }
+    .site-footer {
+        margin-bottom: 70px;
+    }
 }
 
 .site-footer::before {
@@ -992,8 +1024,16 @@ iframe[src^="https://codepen"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    min-height: 175px;
     position: relative;
+}
+
+.about-panel h3 {
+    font-size: 2.4rem;
+}
+
+.about-panel--project {
+    min-height: 125px;
 }
 
 /* about carl partial */
@@ -1116,6 +1156,7 @@ form textarea {
 
 fieldset {
     border: 0;
+    padding: 0;
 }
 
 .form-row label {
