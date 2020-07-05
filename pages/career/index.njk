@@ -15,7 +15,12 @@ permalink: "career/"
         <ul class="downloads-list">
             {% for entry in career %}
                 <li class="downloads-list-item {% if loop.first %}no-padding-top{% endif %}">
-                    <a href="{{ entry.url }}" class="h4">{{ entry.title }}</a>
+                    <div>
+                        <a href="{{ entry.url }}" class="h4">
+                            {{ entry.title }} / <span>{{ entry.role }}</span>
+                        </a>
+                        <p>{{ entry.years }}</p>
+                    </div>
                     <a href="{{ entry.url }}" class="btn">Read More</a>
                 </li>
             {% endfor %}

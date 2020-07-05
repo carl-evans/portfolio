@@ -459,6 +459,10 @@ h6 {
     .site-footer {
         margin-bottom: 70px;
     }
+    .h4 span {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
 }
 
 .site-footer::before {
@@ -909,10 +913,8 @@ iframe[src^="https://codepen"] {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
-}
-
-.downloads-list-item {
     padding: 20px 0;
+    position: relative;
 }
 
 .downloads-list-item:first-of-type {
@@ -933,6 +935,10 @@ iframe[src^="https://codepen"] {
 
 .downloads-list-item .h4 {
     padding-right: 30px;
+}
+
+.downloads-list-item:div:first-of-type {
+    margin-left: 30px;
 }
 
 .downloads-list-item .btn {
