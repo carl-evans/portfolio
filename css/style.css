@@ -309,7 +309,7 @@ h6 {
 
 .logo:hover,
 .logo:focus {
-    border-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') 25 25 round;
+    border-color: var(--pink);
     box-shadow: 0px 10px 14px -13px rgba(0, 0, 0, .5);
     transform: translateY(-4px);
 }
@@ -417,8 +417,10 @@ h6 {
     white-space: nowrap;
 }
 
+.dark-mode-button:hover,
 .dark-mode-button:focus {
-    outline: none;
+    border-color: var(--pink);
+    outline: 0;
 }
 
 .dark-mode-button svg {
