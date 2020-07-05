@@ -56,10 +56,12 @@ data: thoughts
             <div class="downloads mx-auto">
                 <ul class="downloads-list downloads-list--homepage">
                     {% for entry in thoughts %}
-                        <li class="downloads-list-item">
-                            <a href="{{ entry.url }}" class="h4">{{ entry.title }}</a>
-                            <a href="{{ entry.url }}" class="btn">Read More</a>
-                        </li>
+                        {% if loop.index <= 3 %}
+                            <li class="downloads-list-item">
+                                <a href="{{ entry.url }}" class="h4">{{ entry.title }}</a>
+                                <a href="{{ entry.url }}" class="btn">Read More</a>
+                            </li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
