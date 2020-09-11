@@ -552,6 +552,7 @@ h6 {
 .navy .btn {
     background-color: var(--navy);
     border: 2px solid var(--pink);
+    color: var(--white);
 }
 
 .pink,
@@ -590,18 +591,19 @@ h6 {
 
 .blue {
     background-color: var(--blue);
-    color: var(--white);
+    color: var(--navy);
 }
 
 .blue h1,
 .blue h2,
 .blue h3 {
-    color: var(--white);
+    color: var(--navy);
 }
 
 .blue .btn {
     background-color: var(--blue);
-    border: 2px solid var(--white);
+    border: 2px solid var(--navy);
+    color: var(--navy);
 }
 
 /* block spacing */
@@ -622,9 +624,9 @@ h6 {
 
 /* button style links */
 .btn {
-    background-color: var(--pink);
+    background-color: #EA85AF;
     border-radius: 3px;
-    color: var(--white);
+    color: #000;
     margin-top: 10px;
     display: inline-block;
     font-weight: 700;
@@ -926,11 +928,11 @@ iframe[src^="https://codepen"] {
 }
 
 .blue .downloads-list-item+.downloads-list-item {
-    border-top: 2px solid var(--white);
+    border-top: 2px solid var(--navy);
 }
 
 .blue .h4 {
-    color: var(--white);
+    color: var(--navy);
 }
 
 .downloads-list-item .h4 {
@@ -948,7 +950,7 @@ iframe[src^="https://codepen"] {
 }
 
 .blue .downloads-list-item .btn {
-    color: var(--white);
+    color: var(--navy);
 }
 
 @media(min-width: 640px) {
