@@ -12,11 +12,14 @@ permalink: "projects/"
 
 {% block content %}
     <h1 class="page-heading">Projects.</h1>
-    <div class="grid halves">
+    <div class="grid halves projects-index">
         {% set theme = cycler('pink', 'navy', 'navy', 'pink') %}
         {% for entry in projects %}
             <a href="{{ entry.slug }}" aria-label="{{ entry.title }}">
-                <div class="about-panel about-panel--project {{ theme.next() }}">
+                <div 
+                    class="about-panel about-panel--project has-image"
+                    style="background-image: -webkit-linear-gradient(135deg, transparent, #333), url('{{ entry.blocks[0].image }}');background-repeat:no-repeat;background-size: cover; background-position:center;"
+                >
                     <h3>{{ entry.title }}</h3>
                 </div>
             </a>

@@ -1021,9 +1021,14 @@ iframe[src^="https://codepen"] {
     z-index: 1;
 }
 
+.card,
+.about-panel {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .12);
+}
+
 .card:hover,
 .about-panel:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, .12);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
     transform: translateY(-5px);
 }
 
@@ -1044,6 +1049,10 @@ iframe[src^="https://codepen"] {
 
 .about-panel--project {
     min-height: 125px;
+}
+
+.about-panel--project h3 {
+    color: #fff;
 }
 
 /* about carl partial */
@@ -1071,6 +1080,10 @@ iframe[src^="https://codepen"] {
         min-height: 500px;
     }
 
+    .about-panel--project {
+        min-height: 300px;
+    }
+
     .about-panel:active {
         transform: scale(.98);
     }
@@ -1085,6 +1098,10 @@ iframe[src^="https://codepen"] {
 
     .about-layout strong {
         margin-top: 0;
+    }
+
+    .grid.halves.projects-index {
+        padding: 0 50px;
     }
 }
 
