@@ -1328,4 +1328,7 @@ input#name {
     .page-heading+.scroll-snap-y-start {
         margin-top: 12px;
     }
+    .copyright {
+        font-size: 1.4rem;
+    }
 }
