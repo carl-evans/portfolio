@@ -935,9 +935,9 @@ iframe[src^="https://codepen"] {
     color: var(--navy);
 }
 
-.downloads-list-item .h4 {
+/* .downloads-list-item .h4 {
     padding-right: 30px;
-}
+} */
 
 .downloads-list-item:div:first-of-type {
     margin-left: 30px;
