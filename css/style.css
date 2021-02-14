@@ -441,7 +441,7 @@ h6 {
         left: 0;
         width: 100%;
         overflow-x: scroll;
-        padding: 0 20px;
+        padding: 0 0 0 20px;
         z-index: 100;
     }
     .site-header-list {
