@@ -870,6 +870,10 @@ iframe[src^="https://codepen"] {
     max-width: calc(100% + 40px);
 }
 
+.text-image-text p {
+    margin-top: 15px;
+}
+
 @media(min-width: 768px) {
     .text-image {
         display: flex;
