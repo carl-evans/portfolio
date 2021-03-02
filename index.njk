@@ -4,55 +4,50 @@ data: thoughts
 {% extends 'layouts/base.njk' %}
 
 {% block metaTitle %}
-    Front End Developer NI - carlevans.dev
+    Front End Developer Belfast - carlevans.dev
 {% endblock %}
 
 {% block metaDescription %}
-    Front End Web Developer based in Northern Ireland. 
-    Focused on accessible and performant website
-    design and development.
+    Front End Web Developer based in Belfast, Northern Ireland. 
+    Focused on accessible and performant front end development.
 {% endblock %}
 
 {% block content %}
     <h1 class="page-heading">Welcome.</h1>
     <div class="scroll-snap-y-start">
         <div class="block-padding-large pink--homepage relative">
-            <h2 class="turn-accessible-navy-white">Front End Developer in NI</h2>
+            <h2 class="turn-accessible-navy-white">Front End Developer in Belfast</h2>
             <p class="turn-accessible-navy-white">
-            I build websites at Eyekiller and share what 
-            I learn by developing projects, sharing tutorials, 
-            and writing down my thoughts.
+            I build websites at Eyekiller, focused predominantly on
+            front end performance, accessibility, and CMS integration.
+            Outside work, I explore technologies
+            such as React.js and Vue.js.
             </p>
             <a href="/about" class="btn turn-accessible-navy-white">Learn About Me</a>
             <small class="skills turn-accessible-navy-white">
                 HTML,
-                CSS,
+                CSS / Sass,
                 JavaScript,
-                Sass,
+                Git,
                 Craft CMS,
                 Twig,
-                Eleventy,
-                Nunjucks,
-                WordPress,
-                PHP for WordPress,
-                MongoDb,
-                Express,
-                Node,
-                Vue.js
+                Vue,
+                React
             </small>
         </div>
         <div class="block-padding-large navy">
             <h2>I build a lot of stuff</h2>
             <p>
             Most of my experience is in front end development with
-            Craft CMS and WordPress. I am currently upskilling in
-            back end technologies such as Node.js and MongoDb.
+            Craft CMS. Outside work, I currently use
+            front end UI libraries / frameworks such as React.js 
+            and Vue.js.
             </p>
             <a href="/projects" class="btn">View Projects</a>
         </div>
         <div class="block-padding-large blue">
             <h2>I write a lot of stuff</h2>
-            <p>Here are my latest rants:</p>
+            <p>Here are my latest rants on everything front end:</p>
             <div class="downloads mx-auto">
                 <ul class="downloads-list downloads-list--homepage">
                     {% for entry in thoughts %}
